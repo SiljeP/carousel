@@ -1,16 +1,31 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h1{
+    padding:1em;
+    margin: auto;
+    text-align: center;
+}
+
 .carousel {
     display: grid;
     grid-template-columns: 50px auto 50px;
     width: 300px;
+    margin: auto;
 }
 
 .carousel__img{
     grid-column: 1/4;
+    transition: all 500ms ease;
 }
 
 .carousel__backButton{
     grid-column: 1/2;
     z-index: 4;
+  
 }
 
 .carousel__forwardButton{
@@ -34,8 +49,37 @@
 
 .carousel__backButton:hover {
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    
    
 }
 .carousel__forwardButton:hover {
 background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+/* Viderearbejder på dagen før med flere transistions */
+.animatedDiv{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    transition: all 500ms ease;
+
+}
+
+.button{
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    text-align: center;
+    margin: auto;
+    width:300px;
+    padding:1em;
+}
+
+.animatedDiv--moved{
+   transform: translateX(200px);
 }

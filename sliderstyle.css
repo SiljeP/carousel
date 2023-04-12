@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h2{
+    padding:1em;
+    margin: auto;
+    text-align: center;
+}
+
+.slider {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+.slider__img{
+    grid-column: 1/4;
+    transition: all 500ms ease;
+
+    z-index: 1;
+
+    
+}
+
+.slider__backButton{
+    grid-column: 1/2;
+    z-index: 4;
+  
+}
+
+.slider__forwardButton{
+    grid-column: 3/4;
+    z-index: 4;
+}
+
+.slider__img, .slider__backButton, .slider__forwardButton{
+    grid-row: 1/2;
+
+}
+.slider__backButton, .slider__forwardButton{
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    color: white;
+}
+
+
+.slider__backButton:hover {
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    
+}
+.slider__forwardButton:hover {
+background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+.animatedSlide--moved{
+    transform: translateX(200px);
+   
+ }
+
+ .animatedSlide--movedBack{
+    transform: translateX(0px);
+    
+ }
